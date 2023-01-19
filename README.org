@@ -1,2 +1,29 @@
 * README
 My experiments with https://github.com/andy128k/cl-gobject-introspection
+
+I have problem with old libraries
+https://docs.gtk.org/gio/flags.ApplicationFlags.html
+so I have to use deprecated :flags_none
+
+finding library versions
+#+begin_example
+sudo ldconfig -v | grep gio
+libgio-2.0.so.0 -> libgio-2.0.so.0.7200.4
+#+end_example
+
+https://gitlab.gnome.org/GNOME/gobject-introspection
+
+** execute method call
+#+begin_src common-lisp
+(gir:invoke (namespace "Class" 'method) arg1 arg2)
+#+end_src
+
+** methods seen in example
+
+*** ffi
+
+*** invoke
+
+*** property
+
+*** connect
