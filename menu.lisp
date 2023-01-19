@@ -1,7 +1,7 @@
 (in-package :cl-user)
 
-(ql:quickload "cl-gobject-introspection")
-;; (load "~/AAA/gir/menu.lisp")
+(ql:quickload '(cl-gobject-introspection cl-gobject-introspection-wrapper))
+;; (load "~/Programming/Lisp/gir/menu.lisp")
 
 (defvar *gio* (gir:ffi "Gio"))
 (defvar *gobject* (gir:ffi "GObject"))
